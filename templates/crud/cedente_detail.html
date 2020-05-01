@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+<div class="kt-portlet kt-portlet--mobile">
+    <div class="kt-portlet__head kt-portlet__head--lg">
+        <div class="kt-portlet__head-label">
+            <h3 class="kt-portlet__head-title">
+                {% trans 'Cedente Details' %}
+            </h3>
+        </div>
+    </div>
+    <div class="kt-portlet__body kt-portlet__body--fit">
+        <div class="form-group row">
+            <div class="col-lg-2 col-xl-6"></div>
+            <label class="col-xl-2 col-lg-3 col-form-label">Id grupo economico :</label>
+            <div class="col-lg-7 col-xl-6">
+                <span>{{object.grupo_economico_id_grupo_economico}}</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-2 col-xl-6"></div>
+            <label class="col-xl-2 col-lg-3 col-form-label">Id Cedente :</label>
+            <div class="col-lg-7 col-xl-6">
+                <span>{{object.id_cedente}}</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-2 col-xl-6"></div>
+            <label class="col-xl-3 col-lg-3 col-form-label">R1 :</label>
+            <div class="col-lg-7 col-xl-6">
+                <span> {{object.r1}}</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-2 col-xl-6"></div>
+            <label class="col-xl-3 col-lg-3 col-form-label">R2 :</label>
+            <div class="col-lg-7 col-xl-6">
+                <span>{{object.r2}}</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-2 col-xl-6"></div>
+            <label class="col-xl-3 col-lg-3 col-form-label">R3 :</label>
+            <div class="col-lg-7 col-xl-6">
+                <span> {{ object.r3}}</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-2 col-xl-6"></div>
+            <label class="col-xl-3 col-lg-3 col-form-label">Nome :</label>
+            <div class="col-lg-7 col-xl-6">
+                <span> {{ object.nome }}</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-2 col-xl-6"></div>
+            <label class="col-xl-3 col-lg-3 col-form-label">Data Atualizacao :</label>
+            <div class="col-lg-7 col-xl-6">
+                <span> {{ object.data_atualizacao }}</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

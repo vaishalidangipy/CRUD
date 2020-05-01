@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+<div class="kt-portlet kt-portlet--mobile">
+    <div class="kt-portlet__head kt-portlet__head--lg">
+        <div class="kt-portlet__head-label">
+            <h3 class="kt-portlet__head-title">
+                {% trans 'Limite Credito Cedente' %}
+            </h3>
+        </div>
+        <div class="kt-portlet__head-label">
+        {% if messages %}
+            {% for message in messages %}
+                <h5 class="alert alert-{{ message.tags }}">{{ message }}</h5>
+            {% endfor %}
+        {% endif %}
+        </div>
+        <div class="kt-portlet__head-toolbar">
+            <div class="kt-portlet__head-wrapper">
+                <a href="{% url 'add_limite_credito_cedente' %}" class="btn btn-default btn-bold btn-upper btn-font-sm">
+                    <i class="flaticon2-add-1"></i>
+                    New Record
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="kt-portlet__body kt-portlet__body--fit">
+        <div class="kt_datatable" id="scrolling_vertical"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static 'crud/lmt_crd_data_rendering.js' %}" type="text/javascript"></script>
+{% endblock %}
+
+

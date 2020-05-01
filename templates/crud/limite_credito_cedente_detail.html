@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+<div class="kt-portlet kt-portlet--mobile">
+    <div class="kt-portlet__head kt-portlet__head--lg">
+        <div class="kt-portlet__head-label">
+            <h3 class="kt-portlet__head-title">
+                {% trans 'Limit Credito Cedente Details' %}
+            </h3>
+        </div>
+    </div>
+    <div class="kt-portlet__body kt-portlet__body--fit">
+        <div class="form-group row">
+            <div class="col-lg-2 col-xl-6"></div>
+            <label class="col-xl-2 col-lg-3 col-form-label">Id limite credito cedente :</label>
+            <div class="col-lg-7 col-xl-6">
+                <span>{{object.id_limite_credito_cedente}}</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-2 col-xl-6"></div>
+            <label class="col-xl-2 col-lg-3 col-form-label">Fundo id fundo :</label>
+            <div class="col-lg-7 col-xl-6">
+                <span>{{object.fundo_id_fundo}}</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-2 col-xl-6"></div>
+            <label class="col-xl-2 col-lg-3 col-form-label">Cedente id cedente :</label>
+            <div class="col-lg-7 col-xl-6">
+                <span>{{object.cedente_id_cedente}}</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-2 col-xl-6"></div>
+            <label class="col-xl-2 col-lg-3 col-form-label">Data concessao :</label>
+            <div class="col-lg-7 col-xl-6">
+                <span>{{object.data_concessao}}</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-2 col-xl-6"></div>
+            <label class="col-xl-2 col-lg-3 col-form-label">Data concessao :</label>
+            <div class="col-lg-7 col-xl-6">
+                <span>{{object.data_concessao}}</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-2 col-xl-6"></div>
+            <label class="col-xl-2 col-lg-3 col-form-label">Valor nominal limite :</label>
+            <div class="col-lg-7 col-xl-6">
+                <span>{{object.valor_nominal_limite}}</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-2 col-xl-6"></div>
+            <label class="col-xl-2 col-lg-3 col-form-label">Valor percentual limite :</label>
+            <div class="col-lg-7 col-xl-6">
+                <span>{{object.valor_percentual_limite}}</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-2 col-xl-6"></div>
+            <label class="col-xl-2 col-lg-3 col-form-label">Data atualizacao :</label>
+            <div class="col-lg-7 col-xl-6">
+                <span>{{object.data_atualizacao}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

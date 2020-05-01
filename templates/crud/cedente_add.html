@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="kt-portlet kt-portlet--mobile">
+    <div class="kt-portlet__head kt-portlet__head--lg">
+        <div class="kt-portlet__head-label">
+            <h3 class="kt-portlet__head-title">
+                {% trans 'Add Cedente' %}
+            </h3>
+        </div>
+    </div>
+    <form class="kt-form" method="post" action="">
+        {% csrf_token %}
+        <div class="kt-portlet__body">
+            <div class="kt-section kt-section--first">
+                <div class="form-group row">
+                    <label class="col-lg-2 col-form-label">{{ form.grupo_economico_id_grupo_economico.label }} :</label>
+                    <div class="col-lg-4">
+                        {% render_field form.grupo_economico_id_grupo_economico class="form-control" %}
+                        <span class="form-text text-muted alert-danger">{{ form.errors.grupo_economico_id_grupo_economico }}</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-2 col-form-label">{{ form.r1.label }} :</label>
+                    <div class="col-lg-4">
+                        {% render_field form.r1 class="form-control" %}
+                        <span class="form-text text-muted alert-danger">{{ form.errors.r1 }}</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-2 col-form-label">{{ form.r2.label }} :</label>
+                    <div class="col-lg-4">
+                        {% render_field form.r2 class="form-control" %}
+                        <span class="form-text text-muted  alert-danger">{{ form.errors.r2 }}</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-2 col-form-label">{{ form.r3.label }} :</label>
+                    <div class="col-lg-4">
+                        {% render_field form.r3 class="form-control" %}
+                        <span class="form-text text-muted  alert-danger">{{ form.errors.r3 }}</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-2 col-form-label">{{ form.cadastro_grupo.label }} :</label>
+                    <div class="col-lg-4">
+                        {% render_field form.cadastro_grupo class="form-control" %}
+                        <span class="form-text text-muted alert-danger">{{ form.errors.cadastro_grupo }}</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-2 col-form-label">{{ form.cadastro.label }} :</label>
+                    <div class="col-lg-4">
+                        {% render_field form.cadastro class="form-control" %}
+                        <span class="form-text text-muted alert-danger">{{ form.errors.cadastro }}</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-2 col-form-label">{{ form.nome.label }} :</label>
+                    <div class="col-lg-4">
+                        {% render_field form.nome class="form-control" %}
+                        <span class="form-text text-muted alert-danger">{{ form.errors.nome }}</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-2"></label>
+                    <div class="col-lg-4">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}

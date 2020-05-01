@@ -1,0 +1,121 @@
+h1.service-provide {
+    font-size: 25px !important;
+    padding-left: 19% !important;
+    color: #646c9a !important;
+    font-weight: 300 !important;
+    white-space:nowrap !important;
+    padding-right: 6% !important;
+
+}
+
+h1.customer {
+    padding-left: 1% !important;
+}
+
+.header-footer-menu {
+    background : #e1e1ef !important;
+}
+
+.start-dt-err, .end-dt-err{
+    display: none;
+    margin-top: 41px;
+    position: absolute !important;
+    color: red !important;
+}
+
+@media screen and (max-width: 676px) {
+    #kt_header_mobile img {
+        max-width: 60% !important;
+    }
+}
+
+@media screen and (max-width: 676px) {
+    h1.service-provide {
+/*  white-space: normal !important;*/
+    font-size: 22px !important;
+    padding-left: 0% !important;
+    height: 120px !important;
+    color: #646c9a !important;
+    font-weight: 300 !important;
+    padding-bottom: 30px;
+    padding-right: 6% !important;
+    }
+}
+
+
+#pageloader{
+
+     display: block;
+/*  position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 4;*/
+    text-align: center;
+}
+
+/*#pageloader img{
+    margin-top: 20%;
+}*/
+
+.file-code-error{
+    color: #48465b;
+}
+
+div.file-error h5{
+    color:#48465b !important;
+}
+
+.file-content{
+    color: red !important;
+}
+
+.complet-upload-error {
+    padding-top: 15px !important;
+    font-size: 16px !important;
+    color: #c53953 !important;
+}
+
+@media (min-width: 576px){}
+.modal-dialog {
+    max-width: 700px !important;
+/*    max-height: 400px !important;*/
+    margin: 1.75rem auto;
+ }
+}
+
+.complet-upload-error {
+    padding-top: 15px !important;
+    font-size: 16px !important;
+    color: #c53953 !important;
+}
+
+.textarea.form-control {
+    height: 70px !important;
+}
+
+tr.kt-datatable__row:hover {
+    cursor: pointer !important;
+    background: #e8e9f1 !important;
+}
+
+.back-login-button {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+}
+
+.anchor-button {
+    display: block;
+    width: 123px !important;
+    height: 38px;
+    background: #1dc9b7;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    padding: 9px;
+
+}
+
