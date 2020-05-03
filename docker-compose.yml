@@ -1,15 +1,8 @@
 version: '2'
 
 services:
-  db:
-    image: mysql:5.7
-    restart: always
-    ports:
-      - '3306:3306'
-    expose:
-      - '3306'
   django:
-    container_name: crud
+    container_name: crud_app
     build:
       context: .
       dockerfile: Dockerfile
@@ -20,9 +13,4 @@ services:
       python manage.py runserver 0.0.0.0:8000"
     ports:
       - 8000:8000
-    # restart: always
-    depends_on:
-      - db
-
-volumes:
-  my-db:
+    network_mode: "host"

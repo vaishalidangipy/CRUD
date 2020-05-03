@@ -48,10 +48,10 @@ class GrupoEconomicoDeleteView(SuccessMessageMixin, DeleteView):
         instance = self.get_object()
         try:
             instance.delete()
+            messages.success(self.request, 'Successfully deleted the record !')
         except Exception as e:
             messages.warning(self.request, 'Record is not deleted due to Integrity Error')
 
-        messages.success(self.request, 'Successfully deleted the record !')
         return redirect('grupo_economico')
 
 
@@ -129,10 +129,10 @@ class CedenteDeleteView(SuccessMessageMixin, DeleteView):
         instance = self.get_object()
         try:
             instance.delete()
+            messages.success(self.request, 'Successfully deleted the record !')
         except Exception as e:
             messages.warning(self.request, 'Record is not deleted due to Integrity Error')
 
-        messages.success(self.request, 'Successfully deleted the record !')
         return redirect('cedente')
 
 
@@ -210,10 +210,10 @@ class LimiteCreditoCedenteDeleteView(SuccessMessageMixin, DeleteView):
         instance = self.get_object()
         try:
             instance.delete()
+            messages.success(self.request, 'Successfully deleted the record !')
         except Exception as e:
             messages.warning(self.request, 'Record is not deleted due to Integrity Error')
 
-        messages.success(self.request, 'Successfully deleted the record !')
         return redirect('limite_credito_cedente')
 
 
